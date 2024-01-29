@@ -144,3 +144,20 @@ a {
         font-size: 16px;
     }
 }
+@media (max-width: 767px) {
+    .my-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header,
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .center-container {
+        margin-top: 10px;
+    }
+}
