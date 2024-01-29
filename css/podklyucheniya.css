@@ -1,0 +1,99 @@
+html,
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(-45deg, #ee7752, #8016fa, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    /* Установка цвета текста на белый */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.message-block1, .message-block0, .message-block01 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1000px;
+    font-size: 1.1em;
+    position: relative;
+    color: white;
+    /* Установка цвета текста на белый в блоке сообщения */
+}
+
+.message-block1{
+    margin: 5;
+    line-height: 1.6;
+    color: rgb(8, 247, 28);
+    /* Установка цвета текста на белый в параграфах */
+}
+.message-block01{
+    margin: 5;
+    line-height: 1.6;
+    color: rgb(8, 219, 247);
+    /* Установка цвета текста на белый в параграфах */
+}
+
+.message-block span {
+    display: block;
+    color: white;
+    /* Установка цвета текста на белый в span */
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.text-center{
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    font-size: 1.1em;
+    position: relative;
+    color: white;
+}
+
+.left{
+    /*верхней */
+    padding-top:40px;
+    /*правой */
+    padding-right:80px;
+    /*нижней */
+    padding-bottom:40px;
+    /*левой*/
+    padding-left:300px;
+
+}
+#kategori{
+    color: yellow;
+    padding-top: 20px;
+}
+.kategori {
+    width: 200px; /* или любая другая ширина */
+    height: 60px; /* или любая другая высота */
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/podklyucheniya.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Свитч офф</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1 style="color: white; padding-top: 30px;">Реагирование на проблемы с интернет-подключением: извинения и
+            предложение решения</h1>
+    </div>
+    <div class="selection">
+        <div class="row">
+            <div class="col-xl-3 left">
+                <h2 style="color: white;">Категории</h2>
+                <a href="podklyucheniya.html"><button class="btn btn-primary kategori"
+                        type="button">Подключения</button></a><br><br>
+                <a href="perevod.html"><button class="btn btn-primary kategori" type="button">Перевод
+                        звонков</button></a><br><br>
+                <a href="rastorjeniya.html"><button class="btn btn-primary kategori" type="button">Расторжении договора
+                    </button></a><br><br>
+                <a href="svitch.html"><button class="btn btn-primary kategori" type="button">Свитч
+                        офф</button></a></a><br><br>
+                <a href="kompensasiya.html"><button class="btn btn-primary kategori" type="button">Компенсация</button></a><br><br>
+                <a href="status.html"><button class="btn btn-primary kategori" type="button">Статус заявки </button></a><br><br>
+                <a href="odnastaron.html"><button class="btn btn-primary kategori" type="button">Одно старонный прощение</button></a>
+            </div>
+            <div class="col-xl-7 center" style="padding: 30px;">
+                <div class="message-block0">
+                    <p>Оператор: "Добрый день! Спасибо за ваш звонок в [Название компании]. Меня зовут [Имя оператора].
+                        Как я могу помочь вам сегодня?"
+                    </p>
+                </div>
+                <div class="message-block1">
+                    <p>Клиент: "У меня проблемы с [Проблема технического характера системы]"</p>
+                </div>
+                <div class="message-block0">
+                    <p>Оператор: "Мне очень жаль слышать об этом, [Имя клиента]. Давайте попробуем быстро решить эту
+                        проблему. Могли бы вы, пожалуйста, уточнить ваш адрес и номер договора?"
+                    </p>
+                </div>
+                <div class="message-block1">
+                    <p>Клиент: [Предоставляет необходимую информацию]</p>
+                </div>
+                <div class="message-block0">
+                    <p>Оператор: "Спасибо за предоставленные данные. Я сейчас проверю состояние вашего подключения в
+                        нашей системе."
+                    </p>
+                </div>
+                <div class="message-block01">
+                    <p>[После проверки]</p>
+                </div>
+                <div class="text-center">
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                        <button class="btn btn-warning" type="button" id="button1">Свитч офф</button>
+                        <button class="btn btn-warning" type="button" id="button2">Нет электричества с
+                            оборудованием</button>
+                        <button class="btn btn-warning" type="button" id="button3">Не плановые работы</button>
+                    </div>
+                </div>
+                <div class="message-block0" id="massange0" style="display: none;"></div>
+                <div class="message-block1" id="massange1" style="display: none;"></div>
+                <div class="message-block0" id="massange2" style="display: none;"></div>
+                <div class="message-block1" id="massange3" style="display: none;"></div>
+                <div class="message-block0" id="massange4" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable0" style="display: none;"></div>
+                <div class="message-block1" id="messageUnavailable1" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable2" style="display: none;"></div>
+                <div class="message-block1" id="messageUnavailable3" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable4" style="display: none;"></div>
+                <div class="message-block0" id="massange01" style="display: none;"></div>
+                <div class="message-block0" id="massange02" style="display: none;"></div>
+                <div class="message-block0" id="massange03" style="display: none;"></div>
+                <div class="message-block0" id="massange04" style="display: none;"></div>
+                <div class="message-block0" id="massange05" style="display: none;"></div>
+
+
+
+            </div>
+            <div class="col-xl-2 ">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const buttonAvailable = document.getElementById('button1');
+        const massange0 = document.getElementById('massange0');
+        const massange1 = document.getElementById('massange1');
+        const massange2 = document.getElementById('massange2');
+        const massange3 = document.getElementById('massange3');
+        const massange4 = document.getElementById('massange4');
+        const buttonUnavailable = document.getElementById('button2');
+        const messageUnavailable0 = document.getElementById('messageUnavailable0');
+        const messageUnavailable1 = document.getElementById('messageUnavailable1');
+        const messageUnavailable2 = document.getElementById('messageUnavailable2');
+        const messageUnavailable3 = document.getElementById('messageUnavailable3');
+        const messageUnavailable4 = document.getElementById('messageUnavailable4');
+        const buttonUnavailable1 = document.getElementById('button3');
+        const massange01 = document.getElementById('massange01');
+        const massange02 = document.getElementById('massange02');
+        const massange03 = document.getElementById('massange03');
+        const massange04 = document.getElementById('massange04');
+        const massange05 = document.getElementById('massange05');
+
+        buttonAvailable.addEventListener('click', function () {
+            massange0.style.display = 'none';
+            massange1.style.display = 'none';
+            massange2.style.display = 'none';
+            massange3.style.display = 'none';
+            massange4.style.display = 'none';
+            messageUnavailable0.style.display = 'none';
+            messageUnavailable1.style.display = 'none';
+            messageUnavailable2.style.display = 'none';
+            messageUnavailable3.style.display = 'none';
+            messageUnavailable4.style.display = 'none';
+            massange01.style.display = 'none';
+            massange02.style.display = 'none';
+            massange03.style.display = 'none';
+            massange04.style.display = 'none';
+            massange05.style.display = 'none';
+
+            massange0.innerHTML = '<p>Оператор: "Благодарю вас за ожидание, [Имя клиента]. Я проверил информацию, и, к сожалению, обнаружил, что проблема действительно возникла на нашей стороне. Это технический сбой, и наши специалисты уже работают над его устранением."</p>';
+            massange0.style.display = 'block';
+
+            massange1.innerHTML = '<p>Клиент: [Реакция клиента]</p>';
+            massange1.style.display = 'block';
+
+            massange2.innerHTML = '<p>Оператор: "Я искренне приношу извинения за неудобства. Мы делаем все возможное, чтобы как можно скорее решить эту проблему. По нашим оценкам, подключение будет восстановлено [указать предполагаемые сроки]. Мы также предоставим вам [упомянуть о компенсации, если таковая предусмотрена политикой компании, например, скидку на следующий платеж]."</p>';
+            massange2.style.display = 'block';
+
+            massange3.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
+            massange3.style.display = 'block';
+
+            massange4.innerHTML = '<p>Оператор: "Еще раз приношу извинения за это неудобство. Если у вас возникнут какие-либо дополнительные вопросы или проблемы, пожалуйста, не стесняйтесь обращаться. Спасибо за ваше терпение и понимание, [Имя клиента]."</p>';
+            massange4.style.display = 'block';
+        });
+        buttonUnavailable.addEventListener('click', function () {
+            massange0.style.display = 'none';
+            massange1.style.display = 'none';
+            massange2.style.display = 'none';
+            massange3.style.display = 'none';
+            massange4.style.display = 'none';
+            messageUnavailable0.style.display = 'none';
+            messageUnavailable1.style.display = 'none';
+            messageUnavailable2.style.display = 'none';
+            messageUnavailable3.style.display = 'none';
+            messageUnavailable4.style.display = 'none';
+            massange01.style.display = 'none';
+            massange02.style.display = 'none';
+            massange03.style.display = 'none';
+            massange04.style.display = 'none';
+            massange05.style.display = 'none';
+
+            messageUnavailable0.innerHTML = '<p>Оператор: "Благодарю вас за ожидание. По данным, которые у меня есть, в вашем районе в данный момент отсутствует электроснабжение, что, скорее всего, является причиной проблем с подключением к интернету. Как правило, в таких случаях подключение восстанавливается автоматически после того, как электроснабжение будет восстановлено."</p>';
+            messageUnavailable0.style.display = 'block';
+
+            messageUnavailable1.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
+            messageUnavailable1.style.display = 'block';
+
+            messageUnavailable2.innerHTML = '<p>Оператор: "Я рекомендую следить за сообщениями местных энергетических служб о восстановлении электроснабжения. Если после возвращения электричества подключение к интернету не восстановится, пожалуйста, свяжитесь с нами снова, и мы предпримем дополнительные шаги для решения вашей проблемы."</p>';
+            messageUnavailable2.style.display = 'block';
+
+            messageUnavailable3.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
+            messageUnavailable3.style.display = 'block';
+
+            messageUnavailable4.innerHTML = '<p>Оператор: "Если у вас есть еще вопросы или вам нужна дополнительная помощь, пожалуйста, не стесняйтесь обращаться. Спасибо за ваше терпение и понимание в этой ситуации. Желаем вам скорейшего восстановления электроснабжения и стабильного интернет-соединения, [Имя клиента]."</p>';
+            messageUnavailable4.style.display = 'block';
+        });
+        buttonUnavailable1.addEventListener('click', function () {
+            massange0.style.display = 'none';
+            massange1.style.display = 'none';
+            massange2.style.display = 'none';
+            massange3.style.display = 'none';
+            massange4.style.display = 'none';
+            messageUnavailable0.style.display = 'none';
+            messageUnavailable1.style.display = 'none';
+            messageUnavailable2.style.display = 'none';
+            messageUnavailable3.style.display = 'none';
+            messageUnavailable4.style.display = 'none';
+            massange01.style.display = 'none';
+            massange02.style.display = 'none';
+            massange03.style.display = 'none';
+            massange04.style.display = 'none';
+            massange05.style.display = 'none';
+
+            messageUnavailable0.innerHTML = '<p>Оператор: "Благодарю за терпение. Я выяснил, что в вашем районе в настоящий момент проводятся незапланированные работы/возникли сбои в системе, которые могут быть причиной проблемы с интернетом. Наши технические специалисты уже работают над устранением этой проблемы."</p>';
+            messageUnavailable0.style.display = 'block';
+
+            messageUnavailable1.innerHTML = '<p>Клиент: [Реакция клиента]</p>';
+            messageUnavailable1.style.display = 'block';
+
+            messageUnavailable2.innerHTML = '<p>Оператор: "Мы приносим свои извинения за любые неудобства, вызванные этой ситуацией. Согласно нашим данным, ожидается, что проблема будет решена примерно [указать ориентировочные сроки, если они известны]. Мы будем держать вас в курсе и сообщим, как только все восстановится. Если у вас возникнут дополнительные вопросы или вам понадобится помощь после восстановления услуг, пожалуйста, свяжитесь с нами."</p>';
+            messageUnavailable2.style.display = 'block';
+
+            messageUnavailable3.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
+            messageUnavailable3.style.display = 'block';
+
+            messageUnavailable4.innerHTML = '<p>Оператор: "Еще раз приношу извинения за неудобства, [Имя клиента]. Спасибо за ваше терпение и понимание в этой ситуации. Мы здесь, чтобы помочь вам, так что не стесняйтесь обращаться по любым вопросам. Желаем вам приятного дня и скорейшего восстановления подключения."</p>';
+            messageUnavailable4.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

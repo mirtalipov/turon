@@ -1,0 +1,19 @@
+.btn.btn-warning {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn.btn-warning:hover {
+    background-color: #f50000;
+    transform: scale(1.1);
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/podklyucheniya.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Подключения</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <h1 style="color: white; padding-top: 30px;">Скрипт для операторов по обращению нового подключения. </h1>
+    </div>
+    <div class="selection">
+
+        <div class="row">
+            <div class="col-xl-3 left">
+                <h2 style="color: white;">Категории</h2>
+                <a href="podklyucheniya.html"><button class="btn btn-primary kategori" type="button">Подключения</button></a><br><br>
+                <a href="perevod.html"><button class="btn btn-primary kategori" type="button">Перевод звонков</button></a><br><br>
+                <a href="rastorjeniya.html"><button class="btn btn-primary kategori" type="button">Расторжении договора </button></a><br><br>
+                <a href="svitch.html"><button class="btn btn-primary kategori" type="button">Свитч офф</button></a></a><br><br>
+                <a href="kompensasiya.html"><button class="btn btn-primary kategori" type="button">Компенсация</button></a><br><br>
+                <a href="status.html"><button class="btn btn-primary kategori" type="button">Статус заявки </button></a><br><br>
+                <a href="odnastaron.html"><button class="btn btn-primary kategori" type="button">Одно старонный прощение</button></a>
+            </div>
+            <div class="col-xl-7 center" style="padding: 30px;">
+                <div class="message-block0">
+                    <p>Оператор: "Добрый день! Спасибо за звонок в [Название
+                        компании], интернет-провайдера. Меня зовут [Имя оператора]. Как я могу помочь вам сегодня?"
+                    </p>
+                </div>
+                <div class="message-block1">
+                    <p>Клиент: "Я хотел бы узнать о подключении интернета." </p>
+                </div>
+                <div class="message-block0">
+                    <p>Оператор: "Отлично, я рад помочь вам. Для начала, могли бы вы предоставить мне ваш точный
+                        адрес? Это необходимо для проверки доступности наших услуг в вашем районе." </p>
+                </div>
+                <div class="message-block1">
+                    <p>Клиент: Предоставляет адрес</p>
+                </div>
+                <div class="message-block0">
+                    <p>Оператор: "Спасибо, дайте мне минутку, я проверю доступность услуг по вашему адресу." </p>
+                </div>
+                <div class="text-center">
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-center">
+                        <button class="btn btn-warning me-md-2" type="button" id="buttonServiceAvailable">Если
+                            услуга
+                            доступны</button>
+                        <button class="btn btn-warning" type="button" id="buttonServiceUnavailable">Если услуга
+                            не
+                            доступны</button>
+                    </div>
+                </div>
+                <div class="message-block0" id="massange0" style="display: none;"></div>
+                <div class="message-block1" id="massange1" style="display: none;"></div>
+                <div class="message-block0" id="massange2" style="display: none;"></div>
+                <div class="message-block01" id="massange3" style="display: none;"></div>
+                <div class="message-block0" id="massange4" style="display: none;"></div>
+                <div class="message-block1" id="massange5" style="display: none;"></div>
+                <div class="message-block0" id="massange6" style="display: none;"></div>
+                <div class="message-block1" id="massange7" style="display: none;"></div>
+                <div class="message-block0" id="massange8" style="display: none;"></div>
+
+                <div class="message-block0" id="messageUnavailable0" style="display: none;"></div>
+                <div class="message-block1" id="messageUnavailable1" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable2" style="display: none;"></div>
+                <div class="message-block01" id="messageUnavailable3" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable4" style="display: none;"></div>
+                <div class="message-block1" id="messageUnavailable5" style="display: none;"></div>
+                <div class="message-block0" id="messageUnavailable6" style="display: none;"></div>
+
+
+            </div>
+            <div class="col-xl-2 ">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Получение элементов по идентификатору
+        const buttonAvailable = document.getElementById('buttonServiceAvailable');
+        const massange0 = document.getElementById('massange0');
+        const massange1 = document.getElementById('massange1');
+        const massange2 = document.getElementById('massange2');
+        const massange3 = document.getElementById('massange3');
+        const massange4 = document.getElementById('massange4');
+        const massange5 = document.getElementById('massange5');
+        const massange6 = document.getElementById('massange6');
+        const massange7 = document.getElementById('massange7');
+        const massange8 = document.getElementById('massange8');
+        const buttonUnavailable = document.getElementById('buttonServiceUnavailable');
+        const messageUnavailable0 = document.getElementById('messageUnavailable0');
+        const messageUnavailable1 = document.getElementById('messageUnavailable1');
+        const messageUnavailable2 = document.getElementById('messageUnavailable2');
+        const messageUnavailable3 = document.getElementById('messageUnavailable3');
+        const messageUnavailable4 = document.getElementById('messageUnavailable4');
+        const messageUnavailable5 = document.getElementById('messageUnavailable5');
+        const messageUnavailable6 = document.getElementById('messageUnavailable6');
+
+
+        // Обработчик клика для кнопки "Если услуга доступны"
+        buttonAvailable.addEventListener('click', function () {
+            messageUnavailable0.style.display = 'none';
+            messageUnavailable1.style.display = 'none';
+            messageUnavailable2.style.display = 'none';
+            messageUnavailable3.style.display = 'none';
+            messageUnavailable4.style.display = 'none';
+            messageUnavailable5.style.display = 'none';
+            messageUnavailable6.style.display = 'none';
+
+            // Показываем первое сообщение и скрываем кнопку
+            massange0.innerHTML = '<p>Оператор:"Отличные новости, [Имя клиента]! Наши услуги доступны по вашему адресу. Мы предлагаем несколько тарифных планов, включая [перечислить основные тарифы]. Каждый из них включает [описать особенности, например, скорость интернета, объем трафика, дополнительные услуги]. В зависимости от ваших потребностей, я могу порекомендовать [рекомендовать определенный тариф]."</p>';
+            massange0.style.display = 'block';
+
+
+            // Показываем второе сообщение
+            massange1.innerHTML = '<p>Клиент: [Задает вопросы о тарифах или выражает интерес к конкретному предложению]</p>';
+            massange1.style.display = 'block';
+
+            // Показываем третье сообщение
+            massange2.innerHTML = '<p>Оператор:"Для тарифа [название тарифа] условия следующие: [подробно описать условия]. Также у нас есть [упомянуть о специальных предложениях или акциях, если они есть]. Чтобы оформить подключение, мне нужно будет уточнить некоторые ваши данные. Готовы ли вы продолжить?"</p>';
+            massange2.style.display = 'block';
+
+            massange3.innerHTML = '<p>[После согласия клиента]</p>';
+            massange3.style.display = 'block';
+
+            massange4.innerHTML = '<p>Оператор:"Отлично! Давайте начнем. Мне понадобится ваше полное имя, контактный телефон и адрес установки услуги. [собрать необходимую информацию]."</p>';
+            massange4.style.display = 'block';
+
+            massange5.innerHTML = '<p>Клиент: [Предоставляет информацию]</p>';
+            massange5.style.display = 'block';
+
+            massange6.innerHTML = '<p>Оператор:"Спасибо, [Имя клиента]. Ваша заявка на подключение к тарифу [название тарифа] принята. Срок выполнение заявки составить 3 рабочих дня. Специалист свяжется с вами для уточнения времени и деталей установки. Есть ли что-то еще, с чем я могу вам помочь сегодня?"</p>';
+            massange6.style.display = 'block';
+
+            massange7.innerHTML = '<p>Клиент: [Задает дополнительные вопросы или завершает разговор]</p>';
+            massange7.style.display = 'block';
+
+            massange8.innerHTML = '<p>Оператор:"Благодарю вас за обращение и выбор [Название компании]. Если у вас возникнут дополнительные вопросы, не стесняйтесь звонить нам. Желаю вам хорошего дня, [Имя клиента]!"</p>';
+            massange8.style.display = 'block';
+        });
+        buttonUnavailable.addEventListener('click', function () {
+            massange0.style.display = 'none';
+            massange1.style.display = 'none';
+            massange2.style.display = 'none';
+            massange3.style.display = 'none';
+            massange4.style.display = 'none';
+            massange5.style.display = 'none';
+            massange6.style.display = 'none';
+            massange7.style.display = 'none';
+            massange8.style.display = 'none';
+
+            messageUnavailable0.innerHTML = '<p>Оператор: "Благодарю вас за ожидание, [Имя клиента]. К сожалению, после проверки я обнаружил, что наши услуги пока что недоступны по вашему адресу. Мы постоянно работаем над расширением нашей сети и надеемся в будущем сможем предложить вам наши услуги."</p>';
+            messageUnavailable0.style.display = 'block';
+
+            messageUnavailable1.innerHTML = '<p>Клиент: [Реакция клиента]</p>';
+            messageUnavailable1.style.display = 'block';
+
+            messageUnavailable2.innerHTML = '<p>Оператор:"Я понимаю, что это может быть разочаровывающим, и извиняюсь за неудобства. Мы можем внести ваши контактные данные в нашу базу и уведомить вас, как только услуги станут доступны в вашем районе. Это было бы удобно для вас?"</p>';
+            messageUnavailable2.style.display = 'block';
+
+            messageUnavailable3.innerHTML = '<p>[После не согласия клиента]</p>';
+            messageUnavailable3.style.display = 'block';
+
+            messageUnavailable4.innerHTML = '<p>Оператор:"Отлично, я добавлю ваши данные в нашу систему. Как только услуги станут доступны, мы немедленно свяжемся с вами. Есть ли что-то еще, чем я могу вам помочь сегодня?"</p>';
+            messageUnavailable4.style.display = 'block';
+
+            messageUnavailable5.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
+            messageUnavailable5.style.display = 'block';
+
+            messageUnavailable6.innerHTML = '<p>Оператор:"Понимаю, [Имя клиента]. Если в будущем вы захотите проверить доступность наших услуг снова, пожалуйста, не стесняйтесь обращаться. Спасибо за ваш интерес к [Название компании], и желаем вам хорошего дня!"</p>';
+            messageUnavailable6.style.display = 'block';
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

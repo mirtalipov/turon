@@ -1,0 +1,146 @@
+.my-button {
+    background-color: #1800f3;
+    border: none;
+    color: rgba(255, 255, 255, 0.986);
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 150px;
+    font-size: 40px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.my-button:hover {
+    background-color: #ec7200;
+    animation: coolAnimation 0.5s ease-in-out;
+    background-color: #ff8c00;
+    /* Change to the desired hover color */
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+    /* Add a subtle shadow effect */
+    text-decoration: none;
+    /* Remove underline on hover */
+}
+
+@keyframes coolAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: #ec7200;
+        /* A different color in the middle of the animation */
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #ff8c00;
+        /* Back to the original color */
+    }
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    height: auto;
+}
+
+.header {
+    color: white;
+    font-size: 80px;
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #481de0;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.footer img {
+    max-width: 40px;
+    max-height: 40px;
+    margin-right: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.footer img:hover {
+    transform: rotate(360deg);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.footer img:hover {
+    animation: pulse 0.5s ease-in-out;
+}
+
+.footer p {
+    color: white;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Добавлены медиа-запросы для адаптивности на мобильных устройствах */
+
+@media (max-width: 600px) {
+    .my-button {
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+    }
+
+    .center-container {
+        padding-top: 100px;
+    }
+
+    .header {
+        font-size: 40px;
+        margin-top: 50px;
+    }
+
+    .footer img {
+        max-width: 30px;
+        max-height: 30px;
+        margin-right: 5px;
+    }
+
+    .footer p {
+        font-size: 16px;
+    }
+}
