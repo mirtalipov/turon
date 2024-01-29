@@ -1,3 +1,4 @@
+/* Общие стили */
 .my-button {
     background-color: #1800f3;
     border: none;
@@ -108,7 +109,7 @@ a {
     margin: 0;
 }
 
-/* Добавлены медиа-запросы для адаптивности на мобильных устройствах */
+/* Добавлены медиа-запросы для адаптивности на мобильных устройствах и мониторах LG 20M37A-B */
 
 @media (max-width: 600px) {
     .my-button {
@@ -154,4 +155,33 @@ a {
         margin-top: 10px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Дополнительные стили для размеров экранов монитора LG 20M37A-B */
+    .my-button {
+        width: 300px;
+        height: 120px;
+        font-size: 32px;
+    }
+
+    .center-container {
+        padding-top: 150px;
+    }
+
+    .header {
+        font-size: 60px;
+        margin-top: 80px;
+    }
+
+    .footer img {
+        max-width: 50px;
+        max-height: 50px;
+        margin-right: 10px;
+    }
+
+    .footer p {
+        font-size: 18px;
+    }
+}
+
 
