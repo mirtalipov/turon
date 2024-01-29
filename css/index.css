@@ -2,7 +2,6 @@
     background-color: #1800f3;
     border: none;
     color: rgba(255, 255, 255, 0.986);
-    text-align: center;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -20,13 +19,8 @@
 
 .my-button:hover {
     background-color: #ec7200;
-    animation: coolAnimation 0.5s ease-in-out;
-    background-color: #ff8c00;
-    /* Change to the desired hover color */
     box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
-    /* Add a subtle shadow effect */
     text-decoration: none;
-    /* Remove underline on hover */
 }
 
 @keyframes coolAnimation {
@@ -37,13 +31,11 @@
     50% {
         transform: scale(1.2);
         background-color: #ec7200;
-        /* A different color in the middle of the animation */
     }
 
     100% {
         transform: scale(1);
         background-color: #ff8c00;
-        /* Back to the original color */
     }
 }
 
@@ -144,6 +136,7 @@ a {
         font-size: 16px;
     }
 }
+
 @media (max-width: 767px) {
     .my-button {
         font-size: 14px;
@@ -161,35 +154,4 @@ a {
         margin-top: 10px;
     }
 }
-@media (max-width: 480px) {
-    .my-button {
-        font-size: 12px;
-    }
 
-    .header,
-    .footer {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .center-container {
-        margin-top: 8px;
-    }
-}
-
-/* Стили для планшетов */
-@media (min-width: 481px) and (max-width: 768px) {
-    .my-button {
-        font-size: 14px;
-    }
-
-    .header,
-    .footer {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .center-container {
-        margin-top: 10px;
-    }
-}
