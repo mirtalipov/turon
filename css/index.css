@@ -161,3 +161,35 @@ a {
         margin-top: 10px;
     }
 }
+@media (max-width: 480px) {
+    .my-button {
+        font-size: 12px;
+    }
+
+    .header,
+    .footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .center-container {
+        margin-top: 8px;
+    }
+}
+
+/* Стили для планшетов */
+@media (min-width: 481px) and (max-width: 768px) {
+    .my-button {
+        font-size: 14px;
+    }
+
+    .header,
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .center-container {
+        margin-top: 10px;
+    }
+}
