@@ -64,3 +64,6 @@ document.getElementById('Dinner').addEventListener('click', function () {
 document.getElementById('Обучение').addEventListener('click', function () {
     document.getElementById('selection').innerHTML = 'Выбрано: Обучение';
 });
+document.getElementById('офис').addEventListener('click', function () {
+    document.getElementById('selection').innerHTML = 'Офисы и Банкоматы';
+});
