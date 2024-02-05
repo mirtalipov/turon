@@ -65,9 +65,9 @@ document.getElementById('Обучение').addEventListener('click', function (
     document.getElementById('selection').innerHTML = 'Выбрано: Обучение';
 });
 document.getElementById('офис').addEventListener('click', function () {
-    document.getElementById('selection').innerHTML = 'Офисы и Банкоматы';
+    document.getElementById('selection').innerHTML = 'Выбрано: Офисы и Банкоматы';
 });
 document.getElementById('акции').addEventListener('click', function () {
-    document.getElementById('selection').innerHTML = 'Акции и подлючение по
+    document.getElementById('selection').innerHTML = 'Выбрано: Акции и подлючение по
               регионам';
 });
