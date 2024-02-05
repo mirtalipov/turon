@@ -67,3 +67,7 @@ document.getElementById('Обучение').addEventListener('click', function (
 document.getElementById('офис').addEventListener('click', function () {
     document.getElementById('selection').innerHTML = 'Офисы и Банкоматы';
 });
+document.getElementById('акции').addEventListener('click', function () {
+    document.getElementById('selection').innerHTML = 'Акции и подлючение по
+              регионам';
+});
