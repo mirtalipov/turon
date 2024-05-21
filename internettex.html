@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/internettex.css">
+    <style>
+        /* Стили для кнопки при нажатии */
+        .play-button:active {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            /* По умолчанию модальное окно скрыто */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Черный полупрозрачный фон */
+        }
+
+        /* Стили для содержимого модального окна */
+        .modal-content {
+            background-color: #0063d4;
+            margin: 5% auto;
+            /* Центрирование по горизонтали и небольшой отступ сверху */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Ширина модального окна */
+            text-align: center;
+            /* Центрирование содержимого */
+        }
+
+        /* Стили для кнопки закрытия модального окна */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Стили для кнопки закрытия при наведении */
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Стили для видео */
+        video {
+            width: 25%;
+            /* Ширина видео на всю ширину модального окна */
+        }
+    </style>
+    <title>Инструкции</title>
+</head>
+
+<body>
+    <h1 class="tema1">Информация о нашем интернете</h1>
+    <div class="selection">
+        <div class="container center-container">
+            <div class="row">
+                <div class="col col2">
+                    <h2 class="tema2">Документация</h2><br>
+                    <a href="https://docs.google.com/document/d/1p_nFPbhkflWEEP53HSvXrjxFN8lapFVMu6iOq8Fyt0c/edit"
+                        target="_blank"><button>Билинг</button></a><br>
+                    <a href="https://docs.google.com/document/d/1qSI1MGKB5AQZIdvfsbnwmF6BzQoufhpLYgI9ayiyIKo/edit"
+                        target="_blank"><button>Тип подключение!</button></a><br>
+                    <a href="https://docs.google.com/document/d/1gsP3c7eJzfUDPDIpY7ILMkvNd6p1KmF3ysrpQvik_N4/edit"
+                        target="_blank"><button>Проблемы с скоростью</button></a><br>
+                </div>
+
+                <div class="col col2">
+                    <h2 class="tema2">Видео уроки</h2><br>
+                    <button class="play-button" onclick="openModal('myModal1')">Настройка ArcherC6</button>
+                    <!-- Модальное окно 1 -->
+                    <div id="myModal1" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal1')">&times;</span>
+                            <video id="myVideo1" controls>
+                                <source src="video/Archer c 64 настройка.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal2')">Настройки СНР роутера</button>
+                    <!-- Модальное окно 2 -->
+                    <div id="myModal2" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal2')">&times;</span>
+                            <video id="myVideo2" controls>
+                                <source src="video/Настройка снр роутера.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal3')">Настройка роутера TL-WR886N</button>
+                    <!-- Модальное окно 3 -->
+                    <div id="myModal3" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal3')">&times;</span>
+                            <video id="myVideo3" controls>
+                                <source src="video/настройка роутера TL-WR886N.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal4')">Настройки роутера ipTIME A12</button>
+                    <!-- Модальное окно 4 -->
+                    <div id="myModal4" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal4')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/настройки роутера ipTIME A12.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal5')">настройки MERCUSYS роутер</button>
+                    <!-- Модальное окно 5 -->
+                    <div id="myModal5" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal5')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/настройки MERCUSYS роутер MW325R.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal6')">Переключить с adsl на ethernet</button>
+                    <!-- Модальное окно 6 -->
+                    <div id="myModal6" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal6')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/Переключить с adsl на ethernet ..mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal7')">netis DL4312 ADSL2-modem router</button>
+                    <!-- Модальное окно 7 -->
+                    <div id="myModal7" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal7')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/netis DL4312 ADSL2-modem router..mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal8')">SNR-CPE-MD2 как обновить</button>
+                    <!-- Модальное окно 8 -->
+                    <div id="myModal8" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal8')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/SNR-CPE-MD2 как обновить.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal9')">Настройка MiWiFi-R4CM</button>
+                    <!-- Модальное окно 9 -->
+                    <div id="myModal9" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal9')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/MiWiFi-R4CM.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <button class="play-button" onclick="openModal('myModal10')">Настройка СUDY</button>
+                    <!-- Модальное окно 10 -->
+                    <div id="myModal10" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal('myModal10')">&times;</span>
+                            <video id="myVideo4" controls>
+                                <source src="video/как настроить роутер СUDY.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Функция открытия модального окна
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        // Функция закрытия модального окна
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+            var video = modal.querySelector('video');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function (event) {
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function (modal) {
+                if (event.target == modal) {
+                    closeModal(modal.id);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

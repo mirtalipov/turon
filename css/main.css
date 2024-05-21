@@ -1,26 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(-45deg, #ee7752, #8016fa, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 30s ease infinite;
-    color: white;
+
 
 
 }
 
-@keyframes gradientBG {
-    0% {
-        background-position: 0% 50%
-    }
 
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
-}
 
 
 .button-container {
@@ -48,6 +33,10 @@ body {
     /* Добавлен нижний отступ в 50 пикселей */
 }
 
+.center-container {
+padding-top: 800px;
+}
+
 
 .button-container {
     margin: 20px;
@@ -68,7 +57,7 @@ button {
     font-size: 16px;
     text-align: center;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
 

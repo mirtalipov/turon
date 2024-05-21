@@ -1,8 +1,12 @@
 /* Общие стили */
 body {
     margin: 0;
+    background: url(../image/3521.png)  center no-repeat , url(../image/322.png);
+    
+    
 }
 
+  
 .my-button {
     background-color: #1800f3;
     border: none;
@@ -48,9 +52,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding-top: 200px;
+    align-items:center ;
+    padding-top: 0%;
     height: auto;
+    
+
 }
 
 .header {
@@ -89,7 +95,6 @@ a {
 .footer-content {
     display: flex;
     align-items: center;
-    justify-content: left;
 }
 
 .footer img {

@@ -1,0 +1,111 @@
+/* Общие стили для всех устройств */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #3c3b3f, #605c3c, #373b44, #4286f4);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.col {
+    flex-basis: calc(45% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    height: auto;
+}
+
+/* Современные стили для заголовка h1 */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fdfdfb;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Современные стили для заголовка h2 */
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ebebeb;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    width: 300px;
+    height: 50px;
+    background-color: #df6d03; /* Зеленый фон */
+    color: white; /* Белый текст */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px; /* Скругленные углы */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    line-height: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+
+button:hover {
+    background-color: #45a049; /* Цвет фона при наведении (немного темнее) */
+    transform: translateY(-2px); /* Небольшое поднятие кнопки при наведении */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
