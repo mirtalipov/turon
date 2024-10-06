@@ -1,128 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/podklyucheniya.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Расторжения договора </title>
+    <link rel="stylesheet" href="скрипт/podklyucheniya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Расторжения договора</title>
 </head>
 
 <body>
-    <div class="header-container">
-        <h1 style="color: white; padding-top: 30px;">При расторжении договора</h1>
-    </div>
-    <div class="selection">
-        <div class="row">
-            <div class="col-xl-3 left">
-                <h2 style="color: white;">Категории</h2>
-                <a href="podklyucheniya.html"><button class="btn btn-primary kategori"
-                        type="button">Подключения</button></a><br><br>
-                <a href="perevod.html"><button class="btn btn-primary kategori" type="button">Перевод
-                        звонков</button></a><br><br>
-                <a href="rastorjeniya.html"><button class="btn btn-primary kategori" type="button">Расторжении договора
-                    </button></a><br><br>
-                <a href="svitch.html"><button class="btn btn-primary kategori" type="button">Свитч офф</button></a><br><br>
-                <a href="kompensasiya.html"><button class="btn btn-primary kategori" type="button">Компенсация</button></a><br><br>
-                <a href="status.html"><button class="btn btn-primary kategori" type="button">Статус заявки </button></a><br><br>
-                <a href="odnastaron.html"><button class="btn btn-primary kategori" type="button">Одно старонный прощение</button></a>
-            </div>
-            <div class="col-xl-7 center" style="padding: 30px;">
-                <div class="message-block0">
-                    <p>Оператор: "Добрый день! Спасибо за звонок в [Название компании], ваш интернет-провайдер. Меня
-                        зовут [Имя оператора]. Как я могу помочь вам сегодня?"
-                    </p>
+    <header class="header">
+        <a href="instrument.html" class="main-menu-btn">
+            <i class="fas fa-home"></i> <!-- Иконка дома из Font Awesome -->
+        </a>
+        <div class="script-text">
+            При расторжении договора
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Категории</h2><br>
+            <ul class="nav-list">
+                <li><a href="podklyucheniya.html" class="nav-link">Подключения</a></li>
+                <li><a href="perevod.html" class="nav-link">Перевод звонков</a></li>
+                <li><a href="rastorjeniya.html" class="nav-link">Расторжение договора</a></li>
+                <li><a href="svitch.html" class="nav-link">Свитч офф</a></li>
+                <li><a href="kompensasiya.html" class="nav-link">Компенсация</a></li>
+                <li><a href="status.html" class="nav-link">Статус заявки</a></li>
+                <li><a href="odnastaron.html" class="nav-link">Одно старонный прощение</a></li>
+            </ul>
+        </nav>
+
+        <main class="chat-area">
+            <div class="chat-window">
+                <div class="message-block operator">
+                    <p>Оператор: "Добрый день! Спасибо за звонок в [Название компании], ваш интернет-провайдер. Меня зовут [Имя оператора]. Как я могу помочь вам сегодня?"</p>
                 </div>
-                <div class="message-block1">
-                    <p>Клиент: "Я хочу отключить мой интернет." </p>
+                <div class="message-block client">
+                    <p>Клиент: "Я хочу отключить мой интернет."</p>
                 </div>
-                <div class="message-block0">
-                    <p>Оператор: "Я понимаю, [Имя клиента]. Мы не хотели бы терять вас как клиента. Могу ли я узнать,
-                        что стало причиной вашего желания отключить интернет? Мы стремимся улучшать наш сервис и ваше
-                        мнение очень важно для нас."
-                    </p>
+                <div class="message-block operator">
+                    <p>Оператор: "Я понимаю, [Имя клиента]. Мы не хотели бы терять вас как клиента. Могу ли я узнать, что стало причиной вашего желания отключить интернет? Мы стремимся улучшать наш сервис и ваше мнение очень важно для нас."</p>
                 </div>
-                <div class="message-block1">
-                    <p>Клиент: [Объясняет причины]</p>
+                <div class="message-block client">
+                    <p>Клиент: [Объясняет причины][В зависимости от причин]</p>
                 </div>
-                <div class="message-block01">
-                    <p>[В зависимости от причин]</p>
+                <div class="message-block operator">
+                    <p>Оператор: "Благодарю вас за откровенность. Учитывая вашу ситуацию, мы можем предложить [предложить альтернативные тарифы, услуги, скидки или другие решения, соответствующие проблемам клиента]. Возможно, это окажется более подходящим вариантом для вас?"</p>
                 </div>
-                <div class="message-block0">
-                    <p>Оператор: "Благодарю вас за откровенность. Учитывая вашу ситуацию, мы можем предложить
-                        [предложить
-                        альтернативные тарифы, услуги, скидки или другие решения, соответствующие проблемам клиента].
-                        Возможно, это окажется более подходящим вариантом для вас?"
-                    </p>
-                </div>
-                <div class="message-block1">
+                <div class="message-block client">
                     <p>Клиент: [Ответ клиента]</p>
                 </div>
-                <div class="text-center">
-                    <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-                        <button class="btn btn-warning" type="button" id="button1">Если клиент согласился
-                            остаться после уговора</button>
-                        <button class="btn btn-warning" type="button" id="button2">[Если клиент все
-                            равно хочет отключиться]</button>
-                    </div>
-                </div>
-                <div class="message-block0" id="massange0" style="display: none;"></div>
-                <div class="message-block1" id="massange1" style="display: none;"></div>
-                <div class="message-block0" id="massange2" style="display: none;"></div>
-                <div class="message-block0" id="messageUnavailable0" style="display: none;"></div>
-                <div class="message-block1" id="messageUnavailable1" style="display: none;"></div>
-                <div class="message-block0" id="messageUnavailable2" style="display: none;"></div>
-
-
-
             </div>
-            <div class="col-xl-2 ">
-            </div>
-        </div>
+            
+            <div class="button-container">
+                <button class="btn" id="buttonAgreeToStay">Если клиент согласился остаться после уговора</button>
+                <button class="btn" id="buttonDecideToDisconnect">Если клиент все равно хочет отключиться</button>                
+            </div>   
+            <div class="message-output" style="display: none;"></div> <!-- Элемент для вывода сообщений -->
+        </main>
     </div>
 
-    <script>
-        const buttonAvailable = document.getElementById('button1');
-        const massange0 = document.getElementById('massange0');
-        const massange1 = document.getElementById('massange1');
-        const massange2 = document.getElementById('massange2');
-        const buttonUnavailable = document.getElementById('button2');
-        const messageUnavailable0 = document.getElementById('messageUnavailable0');
-        const messageUnavailable1 = document.getElementById('messageUnavailable1');
-        const messageUnavailable2 = document.getElementById('messageUnavailable2');
-
-
-        buttonAvailable.addEventListener('click', function () {
-            messageUnavailable0.style.display = 'none';
-            messageUnavailable1.style.display = 'none';
-            messageUnavailable2.style.display = 'none';
-
-            massange0.innerHTML = '<p>Оператор: "Отлично, [Имя клиента], я рад, что мы нашли решение, которое вас устраивает. Давайте уточним детали. Вы согласились остаться с нами с новым тарифным планом [указать тарифный план] и [упомянуть о любых других изменениях или дополнениях, если они есть]. Все верно?"</p>';
-            massange0.style.display = 'block';
-
-            massange1.innerHTML = '<p>Клиент: [Подтверждает детали]</p>';
-            massange1.style.display = 'block';
-
-            massange2.innerHTML = '<p>Оператор: "Если у вас будут какие-либо вопросы или потребуется дополнительная помощь в будущем, пожалуйста, не стесняйтесь обращаться к нам. Мы всегда рады помочь! Спасибо, что остаетесь с нами, [Имя клиента]. Мы ценим ваш выбор и стремимся предоставлять вам наилучший сервис. Желаем вам приятного пользования нашим интернетом!"</p>';
-            massange2.style.display = 'block';
-        });
-        buttonUnavailable.addEventListener('click', function () {
-            massange0.style.display = 'none';
-            massange1.style.display = 'none';
-            massange2.style.display = 'none';
-
-            messageUnavailable0.innerHTML = '<p>Оператор: "Понимаю ваше решение, [Имя клиента]. Я приступлю к процедуре отключения вашего интернета. Есть ли что-нибудь еще, что я могу для вас сделать перед тем, как мы завершим?"</p>';
-            messageUnavailable0.style.display = 'block';
-            
-            messageUnavailable1.innerHTML = '<p>Клиент: [Ответ клиента]</p>';
-            messageUnavailable1.style.display = 'block';
-
-            messageUnavailable2.innerHTML = '<p>Оператор: "Ваша услуга интернета будет отключена. Если у вас возникнут вопросы в будущем или вы захотите снова воспользоваться нашими услугами, пожалуйста, свяжитесь с нами. Благодарим вас за то время, которое вы были с нами, и желаем всего наилучшего, [Имя клиента]."</p>';
-            messageUnavailable2.style.display = 'block';
-        });
-    </script>
+    <script src="скрипт/rastorjeniya.js"></script>
 </body>
 
 </html>

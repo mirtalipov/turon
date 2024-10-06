@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Сотрудничество/style.css">
+    <script src="https://kit.fontawesome.com/98877b6d7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Coordination</title>
+</head>
+<body>
+    <a href="instrument.html">
+        <button type="button" class="main-menu-btn">
+          <i class="fas fa-home"></i>
+        </button>
+      </a>
+    <div class="container">
+        <form action="#" class="data_abonent" name="submit-to-google-sheet">
+            <h2>Добро пожаловать в координацию</h2>
+            <select id="choices" name="choices" required>
+                <option value="" disabled selected>Выберите статус</option>
+                <option value="Статус заявки">Статус заявки</option>
+                <option value="Отмена заявки">Отмена заявки</option>
+                <option value="Расторжение договора">Расторжение договора</option>
+            </select>
+            <input type="text" name="ссылка" id="ссылка" autocomplete="off" placeholder="Ссылка заявки абонента" required>
+            <input type="tel" name="номер телефона" id="номер" autocomplete="off" placeholder="Номер телефона абонента" required>
+            <input type="text" name="комментария" id="комментария" autocomplete="off" placeholder="оставить комментарии">
+            <div class="button-container">
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="Сотрудничество/funcion.js"></script>
+</body>
+</html>

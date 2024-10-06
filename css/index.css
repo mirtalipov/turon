@@ -1,193 +1,146 @@
 /* Общие стили */
 body {
     margin: 0;
-    background: url(../image/3521.png)  center no-repeat , url(../image/322.png);
-    
-    
+    font-family: 'Arial', sans-serif;
+    background: url(../image/3521.png) center no-repeat, url(../image/322.png) center no-repeat;
+    background-size: cover;
+    background-color: #020253;
+    color: white;
 }
 
-  
-.my-button {
-    background-color: #1800f3;
-    border: none;
-    color: rgba(255, 255, 255, 0.986);
-    text-decoration: none;
+.container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logo {
+    max-width: 350px; /* Максимальная ширина логотипа */
+    height: auto; /* Высота будет автоматически подстраиваться */
+}
+
+.row {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height: 150px;
-    font-size: 40px;
-    margin: 4px 2px;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.my-button {
+    background-color: #0066ff;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px 50px;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    height: 100px;
+    width: 250px;
 }
 
 .my-button:hover {
-    background-color: #ec7200;
-    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
-    text-decoration: none;
+    background-color: #ff6600;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(255, 102, 0, 0.5);
 }
 
-@keyframes coolAnimation {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-        background-color: #ec7200;
-    }
-
-    100% {
-        transform: scale(1);
-        background-color: #ff8c00;
-    }
-}
-
-.center-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
-    padding-top: 0%;
-    height: auto;
-    
-
-}
-
-.header {
-    color: white;
-    font-size: 80px;
-    margin-top: 100px;
-}
-
-a {
-    text-decoration: none;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.2);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+.my-button:focus {
+    outline: none;
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #481de0;
-    padding: 10px;
-    text-align: center;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4c); /* Добавляем градиентный фон */
+    padding: 20px 0; /* Увеличен верхний и нижний отступ */
+    color: white;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* Добавляем тень для эффекта поднятости */
 }
 
 .footer-content {
     display: flex;
+    justify-content: space-between; /* Элементы равномерно распределены */
     align-items: center;
+    max-width: 1200px; /* Устанавливаем максимальную ширину */
+    margin: 0 auto; /* Центрируем содержимое */
+    padding: 0 20px; /* Отступы по бокам */
 }
 
-.footer img {
-    max-width: 40px;
-    max-height: 40px;
-    margin-right: 10px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.footer img:hover {
-    transform: rotate(360deg);
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center; /* Центрирование текста и иконки по вертикали */
 }
 
 .footer p {
-    color: white;
-    font-size: 20px;
     margin: 0;
+    font-size: 14px;
+    opacity: 0.8; /* Добавляем немного прозрачности */
 }
 
-
-/* Добавлены медиа-запросы для адаптивности на мобильных устройствах и мониторах LG 20M37A-B */
-
-@media (max-width: 600px) {
-    .my-button {
-        width: 100%;
-        height: auto;
-        font-size: 24px;
-    }
-
-    .center-container {
-        padding-top: 100px;
-    }
-
-    .header {
-        font-size: 40px;
-        margin-top: 50px;
-    }
-
-    .footer img {
-        max-width: 30px;
-        max-height: 30px;
-        margin-right: 5px;
-    }
-
-    .footer p {
-        font-size: 16px;
-    }
+.footer-logo {
+    max-width: 30px; /* Можно настроить по желанию */
+    height: auto;
+    margin-left: 5px; /* Отступ между текстом и иконкой */
 }
 
-@media (max-width: 767px) {
-    .my-button {
-        font-size: 14px;
+.footer-logo:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Промежутки между ссылками */
+}
+
+.footer-link {
+    color: white; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Жирный шрифт для ссылок */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.footer-link:hover {
+    color: #ff6600; /* Цвет ссылки при наведении */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Вертикальное выравнивание для мобильных устройств */
+        align-items: center; /* Центрирование содержимого футера */
+    }
+
+    .footer-left,
+    .footer-right {
+        margin: 5px 0; /* Отступы между элементами */
+    }
+
+    .row {
+        flex-direction: column; /* Вертикальное расположение элементов в ряду */
+        gap: 20px; /* Уменьшение промежутков между элементами */
     }
 }
 
 @media (max-width: 576px) {
-
-    .header,
-    .footer {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .center-container {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    /* Дополнительные стили для размеров экранов монитора LG 20M37A-B */
     .my-button {
-        width: 300px;
-        height: 120px;
-        font-size: 32px;
+        font-size: 16px;
+        padding: 10px 30px;
+        height: auto; /* Автоматическая высота кнопки */
+        width: 100%; /* Кнопка занимает полную ширину */
+        max-width: 300px; /* Максимальная ширина кнопки */
     }
 
-    .center-container {
-        padding-top: 150px;
-    }
-
-    .header {
-        font-size: 60px;
-        margin-top: 80px;
-    }
-
-    .footer img {
-        max-width: 50px;
-        max-height: 50px;
-        margin-right: 10px;
+    .footer-logo {
+        max-width: 25px; /* Уменьшенная максимальная ширина логотипа */
     }
 
     .footer p {
-        font-size: 18px;
+        font-size: 12px; /* Уменьшенный размер шрифта футера */
     }
 }

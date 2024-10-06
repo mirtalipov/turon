@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Современный шрифт */
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+}
+h1 {
+    font-size: 2.5rem; /* Размер шрифта */
+    color: #4A4A4A; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Шрифт */
+    text-transform: uppercase; /* Преобразование текста в верхний регистр */
+    letter-spacing: 1px; /* Межбуквенный интервал */
+    background-color: #c2d800; /* Фоновый цвет */
+    padding: 10px; /* Внутренние отступы */
+    border-radius: 5px; /* Закругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.script-text {
+    text-align: center; /* Центрирование текста */
+    font-size: 24px; /* Настройка размера шрифта при необходимости */
+    color: #ffffff; /* Белый цвет текста */
+    background-color: rgba(30, 30, 30, 0.8); /* Полу-прозрачный темный фон */
+    padding: 20px; /* Добавление отступов вокруг текста */
+    border-radius: 10px; /* Закругленные углы */
+    margin: 20px auto; /* Центрирование блока и добавление отступов */
+    max-width: 800px; /* Установка максимальной ширины для текстового блока */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Опциональная тень для эффекта подъема */
+}
+
+.header {
+    background-color: rgba(30, 30, 30, 0.9); /* Полу-прозрачный заголовок */
+    color: #ffffff; /* Белый текст */
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Центрирование элементов по вертикали */
+    justify-content: space-between; /* Расстояние между иконкой и текстом */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Усиленная тень */
+}
+
+.main-menu-btn {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00d3f8; /* Цвет кнопки */
+    color: #e0e0e0; 
+    border: none;
+    border-radius: 50%; /* Кнопка круглой формы */
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu-btn:hover {
+    background-color: #3a3a3a; /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: rgba(50, 50, 50, 0.9); /* Темный фон сайдбара */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Полу-прозрачная граница */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Усиленная тень */
+}
+
+.nav-list {
+    list-style: none; /* Удаление маркеров списка */
+    padding: 0; /* Удаление отступов */
+    margin: 0;
+    display: block; /* Блочная структура списка, чтобы каждый элемент был на новой строке */
+}
+
+.nav-link {
+    display: block; /* Блочная структура для ссылок */
+    padding: 12px 20px; /* Отступы вокруг текста */
+    color: #f5f5f5; /* Светлый текст */
+    text-decoration: none; /* Без подчеркивания */
+    border-radius: 50px; /* Закругленные углы в виде капсулы */
+    background: rgba(255, 255, 255, 0.05); /* Легкий полупрозрачный фон */
+    transition: background 0.4s ease, box-shadow 0.3s ease, transform 0.2s ease; /* Плавные эффекты */
+    font-weight: 500; /* Полужирный шрифт */
+    font-size: 16px; /* Размер текста */
+    backdrop-filter: blur(10px); /* Легкий эффект размытия */
+    margin-bottom: 10px; /* Отступ между категориями */
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2); /* Фон при наведении */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.nav-link:active {
+    transform: scale(0.98); /* Легкое уменьшение при нажатии */
+}
+
+
+
+.chat-area {
+    flex: 3;
+    padding: 20px;
+    background-color: rgba(60, 60, 60, 0.9); /* Темный фон области чата */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+.chat-window {
+    max-height: auto;
+    overflow-y: auto; /* Прокрутка, если контент превышает высоту */
+    background-color: rgba(255, 255, 255, 0.05); /* Очень прозрачное окно чата */
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Полу-прозрачная граница */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Усиленная тень */
+}
+
+.message-block {
+    background-color: rgba(100, 100, 100, 0.95); /* Темный полу-прозрачный фон сообщения */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message-block.operator {
+    background-color: rgba(0, 123, 255, 0.9); /* Полу-прозрачный цвет сообщения оператора */
+}
+
+.message-block.client {
+    background-color: rgba(40, 167, 69, 0.9); /* Полу-прозрачный цвет сообщения клиента */
+}
+
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 12px 24px; /* Увеличенные отступы кнопки */
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход */
+    color: #ffffff; /* Белый текст для кнопок */
+    background-color: rgba(0, 123, 255, 0.8); /* Полу-прозрачный цвет кнопки */
+}
+
+.btn:hover {
+    background-color: rgba(0, 95, 200, 1); /* Цвет кнопки при наведении */
+    transform: scale(1.05); /* Легкий эффект масштабирования при наведении */
+}
+
+.message-output {
+    margin-top: 20px;
+    display: none; /* Скрыто по умолчанию */
+}

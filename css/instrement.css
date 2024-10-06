@@ -1,20 +1,138 @@
-.btn.btn-warning {
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #33028d; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
 }
 
-.btn.btn-warning:hover {
-    background-color: #f50000;
-    transform: scale(1.1);
-    animation: pulse 0.5s infinite alternate;
+/* Кнопка главного меню */
+.main-menu-btn {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00d3f8; /* Цвет кнопки */
+    color: #e0e0e0; 
+    border: none;
+    border-radius: 50%; /* Кнопка круглой формы */
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu-btn:hover {
+    background-color: #3a3a3a; /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+}
+
+/* Заголовок */
+.header-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.header-container h1 {
+    font-size: 2.5em; /* Увеличенный размер заголовка */
+    color: #4a90e2; /* Цвет заголовка */
+}
+
+/* Стиль для колонок */
+.selection {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    padding: 20px;
+    background-color: #005fad80; /* Фон колонок */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.column h2 {
+    color: #4a90e2; /* Цвет заголовков колонок */
+    margin-bottom: 15px;
+    font-size: 1.8em; /* Размер заголовков колонок */
+}
+
+/* Кнопки в колонках */
+button {
+    width: 400px; /* Ширина кнопок */
+    padding: 15px; /* Внутренние отступы */
+    margin-bottom: 15px; /* Отступ снизу */
+    background-color: #1d0052; /* Цвет кнопок */
+    color: #fff; /* Цвет текста */
+    border: none; /* Без границ */
+    border-radius: 8px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+    
+    font-size: 1.2em; /* Размер шрифта */
+    font-family: 'Verdana', sans-serif; /* Изменённый шрифт */
+    letter-spacing: 1px; /* Пробелы между буквами */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+/* Стиль текста при наведении */
+button:hover {
+    background-color: #3e2ba8; /* Цвет кнопок при наведении */
+    transform: translateY(-3px); /* Поднятие при наведении */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Увеличенная тень при наведении */
 }
 
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
+/* Параграф с информацией */
+#selection {
+    text-align: center; 
+    margin: 20px;
+    font-size: 1.2em; /* Размер шрифта */
+    color: #bbb; /* Светлый цвет текста */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .selection {
+        flex-direction: column; /* Изменяем расположение колонок на вертикальное */
+        padding: 10px; /* Уменьшаем внутренний отступ */
     }
 
-    100% {
-        transform: scale(1.1);
+    button {
+        width: 100%; /* Ширина кнопок на 100% */
+        padding: 10px; /* Уменьшаем внутренний отступ кнопок */
+        font-size: 1em; /* Уменьшаем размер шрифта кнопок */
+    }
+
+    .column {
+        margin: 10px 0; /* Увеличиваем отступы между колонками */
+    }
+
+    .header-container h1 {
+        font-size: 2em; /* Уменьшаем размер заголовка на мобильных устройствах */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container h1 {
+        font-size: 1.5em; /* Еще меньше для маленьких экранов */
+    }
+
+    .column h2 {
+        font-size: 1.5em; /* Уменьшаем заголовки колонок */
+    }
+
+    #selection {
+        font-size: 1em; /* Уменьшаем размер текста для информации */
     }
 }

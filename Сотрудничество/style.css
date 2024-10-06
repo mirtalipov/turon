@@ -1,0 +1,92 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: url('Image/photo-1726450357089-3c82f522dd1e.avif') no-repeat center center;
+    background-size: cover;
+    font-family: Arial, sans-serif; /* Установите общий шрифт для страницы */
+}
+.main-menu-btn {
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00d3f8; /* Цвет кнопки */
+    color: #e0e0e0; 
+    border: none;
+    border-radius: 50%; /* Кнопка круглой формы */
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.main-menu-btn:hover {
+    background-color: #3a3a3a; /* Цвет кнопки при наведении */
+    transform: scale(1.1); /* Эффект увеличения при наведении */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Центрирование формы по горизонтали */
+    align-items: center;     /* Центрирование формы по вертикали (если контейнер имеет высоту) */
+    height: 100vh;           /* Внешний контейнер занимает всю высоту экрана */
+}
+
+.data_abonent {
+    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон для контента */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    max-width: 500px; /* Максимальная ширина формы */
+    width: 100%; /* Ширина формы на 100% от родительского элемента */
+}
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 27px;
+    color: #333; /* Темно-серый цвет текста */
+    text-align: center; /* Центрируем заголовок */
+}
+
+select, input[type="text"],input[type="tel"] {
+    width: 100%; /* Ширина элемента на 100% от родительского контейнера */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* Светло-серая рамка */
+    border-radius: 5px; /* Скругленные углы */
+    box-sizing: border-box; /* Учитывает отступы и границы в ширину элемента */
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #999; /* Цвет текста в плейсхолдере */
+}
+
+/* Обертка для кнопки */
+.button-container {
+    display: flex;
+    justify-content: center; /* Центрирование кнопки по горизонтали */
+    margin-top: 10px;        /* Отступ сверху для кнопки (по желанию) */
+}
+
+/* Стили для кнопки */
+button {
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border: none;       /* Удаляем стандартные границы */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white;       /* Цвет текста кнопки */
+    font-size: 35px;    /* Размер шрифта */
+    width: 500px;
+    cursor: pointer;    /* Изменение курсора при наведении */
+    border-radius: 10px; /* Закругленные углы кнопки */
+}
+
+button:hover {
+    background-color: #0056b3; /* Цвет фона при наведении */
+}
