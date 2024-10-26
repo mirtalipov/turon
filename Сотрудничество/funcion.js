@@ -1,4 +1,4 @@
-const URL_APP = "https://script.google.com/macros/s/AKfycbwmM3NnAVNLu6LYqWbiUAR6uqzUWANMPzNmRvTUA4stJWZeIxOcvYRNF6X15OI-axSJ/exec"; 
+const URL_APP = "https://script.google.com/macros/s/AKfycbwRRh5TdvpnUGuIIm2YRlk4bmUTFWqcVgVU3SB8JygyJYZ3Ap12gyGixELvH2Iw-p6l/exec"; 
     
 const form = document.querySelector(".data_abonent");
 
