@@ -11,22 +11,39 @@
     <div class="container">
         <form action="#" class="data_abonent" name="submit-to-google-sheet">
             <h2>Добро пожаловать в координацию</h2>
+            
             <select id="choices" name="choices" required>
                 <option value="" disabled selected>Выберите статус</option>
-                <option value="Статус заявки">Статус заявки</option>
-                <option value="Перенос заявки">Перенос заявки</option>
-                <option value="Отмена заявки">Отмена заявки</option>
-                <option value="Расторжение договора">Расторжение договора</option>
+                
+                <optgroup label="Для ремонта">
+                    <option value="Статус заявки ремонт">Статус заявки ремонт</option>
+                    <option value="Перенос заявки ремонт">Перенос заявки ремонт</option>
+                    <option value="Отмена заявки ремонт">Отмена заявки ремонт</option>
+                    <option value="Расторжение договора ремонт">Расторжение договора</option>
+                </optgroup>
+                
+                <optgroup label="Для установки">
+                    <option value="Статус заявки установка">Статус заявки установка</option>
+                    <option value="Перенос заявки установка">Перенос заявки установка</option>
+                    <option value="Отмена заявки установка">Отмена заявки установка</option>
+                </optgroup>
             </select>
+
+            
             <input type="text" name="ссылка" id="ссылка" autocomplete="off" placeholder="Ссылка заявки абонента" required>
+
+            
             <input type="tel" name="номер телефона" id="номер" autocomplete="off" placeholder="Номер телефона абонента" required>
-            <input type="text" name="комментария" id="комментария" autocomplete="off" placeholder="оставить комментарии">
+
+            
+            <input type="text" name="комментария" id="комментария" autocomplete="off" placeholder="Оставить комментарий">
+
             <div class="button-container">
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Отправить</button>
             </div>
         </form>
     </div>
     
-    <script src="funcion.js"></script>
+    <script src="funcion.js" defer></script>
 </body>
 </html>
