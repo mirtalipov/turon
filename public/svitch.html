@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/podklyucheniya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Свитч офф</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="instrument.html" class="main-menu-btn">
+            <i class="fas fa-home"></i> <!-- Иконка дома из Font Awesome -->
+        </a>
+        <div class="script-text">
+            Реагирование на проблемы с интернет-подключением: извинения и предложение решения
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Категории</h2><br>
+            <ul class="nav-list">
+                <li><a href="podklyucheniya.html" class="nav-link">Подключения</a></li>
+                <li><a href="perevod.html" class="nav-link">Перевод звонков</a></li>
+                <li><a href="rastorjeniya.html" class="nav-link">Расторжение договора</a></li>
+                <li><a href="svitch.html" class="nav-link">Свитч офф</a></li>
+                <li><a href="kompensasiya.html" class="nav-link">Компенсация</a></li>
+                <li><a href="status.html" class="nav-link">Статус заявки</a></li>
+                <li><a href="odnastaron.html" class="nav-link">Одно старонный прощение</a></li>
+            </ul>
+        </nav>
+
+        <main class="chat-area">
+            <div class="chat-window">
+                <div class="message-block operator">
+                    <p>Оператор: "Добрый день! Спасибо за ваш звонок в [Название компании]. Меня зовут [Имя оператора]. Как я могу помочь вам сегодня?"
+                    </p>
+                </div>
+                <div class="message-block client">
+                    <p>Клиент: "У меня проблемы с [Проблема технического характера системы]"</p>
+                </div>
+                <div class="message-block operator">
+                    <p>Оператор: "Мне очень жаль слышать об этом, [Имя клиента]. Давайте попробуем быстро решить эту проблему. Могли бы вы, пожалуйста, уточнить ваш адрес и номер договора?"</p>
+                </div>
+                <div class="message-block client">
+                    <p>Клиент: [Предоставляет необходимую информацию]</p>
+                </div>
+                <div class="message-block operator">
+                    <p>Оператор: "Спасибо за предоставленные данные. Я сейчас проверю состояние вашего подключения в нашей системе."</p>
+                </div>
+                <div class="message-block operator">
+                    <p>[После проверки]</p>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="btn" id="buttonAgreeToStay">Свитч офф</button>
+                <button class="btn" id="buttonDecideToDisconnect">Нет электричества с оборудованием</button>
+                <button class="btn" id="buttonUnscheduledWork">Не плановые работы</button> <!-- Новый уникальный ID -->
+            </div>   
+            <div class="message-output" style="display: none;"></div> <!-- Элемент для вывода сообщений -->
+        </main>
+    </div>
+
+    <script src="../src/js/switch.js"></script>
+</body>
+
+</html>

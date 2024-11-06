@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/podklyucheniya.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Расторжения договора</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="instrument.html" class="main-menu-btn">
+            <i class="fas fa-home"></i> <!-- Иконка дома из Font Awesome -->
+        </a>
+        <div class="script-text">
+            При расторжении договора
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <h2>Категории</h2><br>
+            <ul class="nav-list">
+                <li><a href="podklyucheniya.html" class="nav-link">Подключения</a></li>
+                <li><a href="perevod.html" class="nav-link">Перевод звонков</a></li>
+                <li><a href="rastorjeniya.html" class="nav-link">Расторжение договора</a></li>
+                <li><a href="svitch.html" class="nav-link">Свитч офф</a></li>
+                <li><a href="kompensasiya.html" class="nav-link">Компенсация</a></li>
+                <li><a href="status.html" class="nav-link">Статус заявки</a></li>
+                <li><a href="odnastaron.html" class="nav-link">Одно старонный прощение</a></li>
+            </ul>
+        </nav>
+
+        <main class="chat-area">
+            <div class="chat-window">
+                <div class="message-block operator">
+                    <p>Оператор: "Добрый день! Спасибо за звонок в [Название компании], ваш интернет-провайдер. Меня зовут [Имя оператора]. Как я могу помочь вам сегодня?"</p>
+                </div>
+                <div class="message-block client">
+                    <p>Клиент: "Я хочу отключить мой интернет."</p>
+                </div>
+                <div class="message-block operator">
+                    <p>Оператор: "Я понимаю, [Имя клиента]. Мы не хотели бы терять вас как клиента. Могу ли я узнать, что стало причиной вашего желания отключить интернет? Мы стремимся улучшать наш сервис и ваше мнение очень важно для нас."</p>
+                </div>
+                <div class="message-block client">
+                    <p>Клиент: [Объясняет причины][В зависимости от причин]</p>
+                </div>
+                <div class="message-block operator">
+                    <p>Оператор: "Благодарю вас за откровенность. Учитывая вашу ситуацию, мы можем предложить [предложить альтернативные тарифы, услуги, скидки или другие решения, соответствующие проблемам клиента]. Возможно, это окажется более подходящим вариантом для вас?"</p>
+                </div>
+                <div class="message-block client">
+                    <p>Клиент: [Ответ клиента]</p>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="btn" id="buttonAgreeToStay">Если клиент согласился остаться после уговора</button>
+                <button class="btn" id="buttonDecideToDisconnect">Если клиент все равно хочет отключиться</button>                
+            </div>   
+            <div class="message-output" style="display: none;"></div> <!-- Элемент для вывода сообщений -->
+        </main>
+    </div>
+
+    <script src="../src/js/rastorjeniya.js"></script>
+</body>
+
+</html>

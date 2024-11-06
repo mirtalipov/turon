@@ -1,0 +1,12 @@
+{
+  "name": "turon-project",
+  "version": "1.0.0",
+  "description": "Turon project for handling requests and managing statuses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

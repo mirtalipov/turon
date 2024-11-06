@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+
+
+
+}
+
+
+
+
+.button-container {
+    margin: 20px;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* Центрирование текста */
+}
+
+.header-container {
+    margin: 20px 0 50px 0;
+    /* Добавлен нижний отступ в 50 пикселей */
+}
+
+.center-container {
+padding-top: 800px;
+}
+
+
+.button-container {
+    margin: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Установка одинакового размера для всех кнопок */
+.btn {
+    width: 300px;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Дополнительно: изменение стиля при наведении */
+.btn:hover {
+    opacity: 0.8;
+}
+
+#selection {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10 px;
+    color: #fff;
+    background-color: #dd0f0f;
+    padding: 15px;
+    border: 2px solid #dd0f0f;
+    width: 250px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}

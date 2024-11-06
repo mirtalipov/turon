@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/internettex.css">
+    <title>Инструкции</title>
+    <style>
+        /* Стили для кнопки при нажатии */
+        .play-button:active {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        /* Стили для содержимого модального окна */
+        .modal-content {
+            background-color: #0063d4;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            text-align: center;
+        }
+
+        /* Стили для кнопки закрытия модального окна */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Стили для кнопки закрытия при наведении */
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Стили для видео */
+        video {
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="tema1">Информация о нашем интернете</h1>
+    <div class="selection">
+        <div class="container center-container">
+            <div class="row">
+                <div class="col col2">
+                    <h2 class="tema2">Документация</h2><br>
+                    <a href="https://docs.google.com/document/d/1p_nFPbhkflWEEP53HSvXrjxFN8lapFVMu6iOq8Fyt0c/edit"
+                        target="_blank"><button>Билинг</button></a><br>
+                    <a href="https://docs.google.com/document/d/1qSI1MGKB5AQZIdvfsbnwmF6BzQoufhpLYgI9ayiyIKo/edit"
+                        target="_blank"><button>Тип подключение!</button></a><br>
+                    <a href="https://docs.google.com/document/d/1gsP3c7eJzfUDPDIpY7ILMkvNd6p1KmF3ysrpQvik_N4/edit"
+                        target="_blank"><button>Проблемы с скоростью</button></a><br>
+                </div>
+
+                <div class="col col2">
+                    <h2 class="tema2">Видео уроки</h2><br>
+                    <button class="play-button" onclick="openModal('myModal1')">Настройка ArcherC6</button>
+                    <button class="play-button" onclick="openModal('myModal2')">Настройки СНР роутера</button>
+                    <button class="play-button" onclick="openModal('myModal3')">Настройка роутера TL-WR886N</button>
+                    <button class="play-button" onclick="openModal('myModal4')">Настройки роутера ipTIME A12</button>
+                    <button class="play-button" onclick="openModal('myModal5')">настройки MERCUSYS роутер</button>
+                    <button class="play-button" onclick="openModal('myModal6')">Переключить с adsl на ethernet</button>
+                    <button class="play-button" onclick="openModal('myModal7')">netis DL4312 ADSL2-modem router</button>
+                    <button class="play-button" onclick="openModal('myModal8')">SNR-CPE-MD2 как обновить</button>
+                    <button class="play-button" onclick="openModal('myModal9')">Настройка MiWiFi-R4CM</button>
+                    <button class="play-button" onclick="openModal('myModal10')">Настройка СUDY</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальные окна -->
+    <div id="myModal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('myModal1')">&times;</span>
+            <video controls>
+                <source src="../src/assets/video/Archer c 64 настройка.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <!-- Повторите структуру для остальных модальных окон (myModal2 - myModal10) -->
+
+    <script>
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+            var video = modal.querySelector('video');
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        window.onclick = function (event) {
+            var modals = document.querySelectorAll('.modal');
+            modals.forEach(function (modal) {
+                if (event.target == modal) {
+                    closeModal(modal.id);
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
