@@ -1,4 +1,3 @@
-/* Общие стили для всех устройств */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,132 +6,64 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: white;
+    text-align: center;
 }
 
 @keyframes gradientBG {
-    0% {
-        background-position: 0% 50%
-    }
-
-    50% {
-        background-position: 100% 50%
-    }
-
-    100% {
-        background-position: 0% 50%
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: start;
+    flex-wrap: wrap;
+    gap: 15px;
     margin: 20px;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap; /* Обертывание столбцов на маленьких экранах */
-    justify-content: space-around;
-    width: 100%;
-}
-
 .col {
-    flex-basis: calc(45% - 20px); /* Учтем margin при расчете ширины столбца */
-    margin: 10px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 320px;
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 
-.center-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 50px;
-    height: auto;
-}
-
-/* Современные стили для заголовка h1 */
 h1 {
-    text-align: center;
     font-size: 2.5rem;
-    /* Размер шрифта с использованием относительных единиц */
     font-weight: 700;
-    /* Жирное начертание */
-    color: #fdfdfb;
-    /* Цвет текста */
-    margin-bottom: 1rem;
-    /* Отступ снизу */
     text-transform: uppercase;
-    /* Преобразование текста в верхний регистр */
     letter-spacing: 2px;
-    /* Межбуквенное расстояние */
-    line-height: 1.2;
-    /* Межстрочный интервал */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Тень текста */
 }
 
-/* Современные стили для заголовка h2 */
 h2 {
-    font-size: 2rem;
-    /* Размер шрифта с использованием относительных единиц */
+    font-size: 1.8rem;
     font-weight: 600;
-    /* Полужирное начертание */
-    color: #ebebeb;
-    /* Цвет текста */
-    margin-top: 1.5rem;
-    /* Отступ сверху */
-    margin-bottom: 1rem;
-    /* Отступ снизу */
     text-transform: capitalize;
-    /* Преобразование текста, первая буква слова с большой буквы */
     letter-spacing: 1px;
-    /* Межбуквенное расстояние */
-    line-height: 1.4;
-    /* Межстрочный интервал */
     text-shadow: 1px 1px 2px rgba(4, 194, 252, 0.829);
-    /* Тень текста */
 }
 
 button {
-    width: 300px;
-    /* Фиксированная ширина */
+    width: 100%;
     height: 50px;
-    /* Фиксированная высота */
     background-color: #e70000;
-    /* Зеленый фон */
     color: white;
-    /* Белый текст */
-    text-align: center;
-    /* Выравнивание текста по центру */
-    text-decoration: none;
-    /* Убирает подчеркивание текста */
-    display: inline-block;
-    /* Блочно-строчное отображение */
     font-size: 16px;
-    /* Размер шрифта */
-    margin: 4px 2px;
-    /* Внешние отступы */
-    cursor: pointer;
-    /* Вид курсора при наведении */
     border: none;
-    /* Убирает границу */
     border-radius: 5px;
-    /* Скругление углов */
-    transition: background-color 0.3s ease;
-    /* Плавный переход цвета фона */
-    line-height: 50px;
-    /* Высота строки равна высоте кнопки для вертикального центрирования текста */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 8px;
 }
 
 button:hover {
     background-color: #45a049;
-    /* Цвет фона при наведении (немного темнее) */
+    transform: scale(1.05);
 }
